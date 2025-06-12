@@ -1,0 +1,2 @@
+note à moi même: faire un "sudo dhclient" lorsque ta vm n'est plus connectée au redémarrage. Pour recup une ip automatique et arrêter de chercher comme un con.
+Ensuite bah tu lances le truc en arrière plan: " sudo docker compose up --build -d"
