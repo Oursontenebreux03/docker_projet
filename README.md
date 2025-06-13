@@ -29,14 +29,12 @@ Git
 
 ## Démarrage
 
-1. Cloner le repo :
-```bash
 git clone https://github.com/Oursontenebreux03/docker_projet
 cd docker_projet
-
 sudo docker compose up --build -d 
 
-Accéder à l_application
+## Accéder à l_application
+
 Frontend : http://localhost:3000
 Backend : http://localhost:5000
 Postgres : sudo docker exec -it docker_projet-db-1 bash  / \q / Quitter le conteneur : exit
