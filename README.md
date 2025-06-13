@@ -32,7 +32,7 @@ Git
 git clone https://github.com/Oursontenebreux03/docker_projet
 cd docker_projet
 
-sudo docker-compose up --build -d 
+sudo docker compose up --build -d 
 
 Accéder à l'application
 Frontend : http://localhost:3000
