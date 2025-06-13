@@ -7,9 +7,11 @@ Ce projet est une application fullstack conteneurisée avec Docker et orchestré
 - Une base de données **PostgreSQL**  en accès dans le terminal
 
 ---
-## Structure du projet
 
 ```bash
+## Structure du projet
+
+
 my-fullstack-app/
 │
 ├── frontend/          # Code source du frontend
@@ -17,7 +19,7 @@ my-fullstack-app/
 ├── docker-compose.yml
 └── README.md
 
-```bash
+
 ## Prérequis 
 Docker
 Docker Compose
@@ -34,10 +36,10 @@ cd docker_projet
 
 sudo docker compose up --build -d 
 
-Accéder à l'application
+Accéder à l_application
 Frontend : http://localhost:3000
 Backend : http://localhost:5000
-Postgres : docker exec -it my-fullstack-app-db-1 bash  / psql -U postgres -d mydb / \dt  (lister les tables) / \q / Quitter le conteneur : exit
+Postgres : sudo docker exec -it docker_projet-db-1 bash  / \q / Quitter le conteneur : exit
 
 
 Un réseau Docker mynetwork est utilisé pour isoler et sécuriser la communication entre les services.
