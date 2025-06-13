@@ -17,6 +17,14 @@ my-fullstack-app/
 ├── docker-compose.yml
 └── README.md
 
+```bash
+## Prérequis 
+Docker
+Docker Compose
+Git
+
+
+
 ## Démarrage
 
 1. Cloner le repo :
