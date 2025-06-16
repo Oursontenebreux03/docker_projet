@@ -33,6 +33,9 @@ git clone https://github.com/Oursontenebreux03/docker_projet
 cd docker_projet
 sudo docker compose up --build -d 
 
+# Voir l'état des conteneurs
+sudo docker compose ps
+
 ## Accéder à l_application
 
 Frontend : http://localhost:3000
@@ -45,5 +48,5 @@ Un réseau Docker mynetwork est utilisé pour isoler et sécuriser la communicat
 Le volume dbdata permet de conserver les données PostgreSQL même après un arrêt des conteneurs.
 
 
-## Pour nettoyer les conteneurs et volumes
-sudo docker-compose down -v
+## Arrêt avec nettoyage complet
+sudo docker compose down --volumes --remove-orphans
