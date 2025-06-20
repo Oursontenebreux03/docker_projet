@@ -49,7 +49,7 @@ Accès direct au conteneur pour requêtes :
 sudo docker exec -it docker_projet-db-1 bash
 psql -U postgres -d mydb
 SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';
-select $ from utilisateurs;
+select * from utilisateurs;
 # Quitter psql : \q
 # Quitter le conteneur : exit
 
