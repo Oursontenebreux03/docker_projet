@@ -3,7 +3,7 @@
 Ce projet est une application fullstack conteneurisée avec Docker et orchestrée avec **Docker Compose**. Il comprend :
 
 - Un **frontend** accessible sur le port 3000
-- Un **backend** sur le port 5000
+- Un **backend** sur le port 5000 
 - Une base de données **PostgreSQL**  en accès dans le terminal
 
 ---
