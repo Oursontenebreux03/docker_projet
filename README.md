@@ -118,10 +118,10 @@ Liens à fournir pour l’évaluation
 
 Repository GitHub public (ce projet)
 
-Repository Docker Hub (tes images publiées)
+Repository Docker Hub (mes images publiées)
 
 
-Auteur
+Auteurs
 Aziz Koné
 Antiki Djibaba
 Kevin Sureshe
