@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire Utilisateur</title>
+</head>
+<body>
+  <h1>Formulaire Utilisateur</h1>
+  <form id="userForm">
+    <label>Nom : <input type="text" name="nom" required></label><br>
+    <label>Âge : <input type="number" name="age" required></label><br>
+    <label>Email : <input type="email" name="email" required></label><br>
+    <button type="submit">Envoyer</button>
+  </form>
+  <div id="message"></div>
+  <hr>
+  <h2>Utilisateurs inscrits :</h2>
+  <ul id="userList"></ul>
+  <script>
+    async function refreshUsers() {
+      const res = await fetch('http://localhost:5000/api/users');
+      const users = await res.json();
+      document.getElementById('userList').innerHTML =
+        users.map(u => `<li>${u.nom} (${u.age} ans) - ${u.email}</li>`).join('');
+    }
+
+    document.getElementById('userForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      data.age = Number(data.age);
+      const res = await fetch('http://localhost:5000/api/users', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      });
+      if (res.ok) {
+        document.getElementById('message').textContent = 'Utilisateur ajouté !';
+        await refreshUsers();
+      } else {
+        document.getElementById('message').textContent = 'Erreur lors de l\'ajout.';
+      }
+    };
+
+    refreshUsers();
+  </script>
+</body>
+</html>
