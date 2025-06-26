@@ -29,8 +29,8 @@ docker_projet/
 Clonez le repo, placez-vous dans le dossier et lancez la stack :
 
 ```bash
-git clone https://github.com/Oursontenebreux03/docker_projet
-cd docker_projet
+git clone https://github.com/Oursontenebreux03/docker_projet__ESGI_2A1
+cd docker_projet__ESGI_2A1
 sudo docker compose up --build -d
 
 Voir l’état des conteneurs
